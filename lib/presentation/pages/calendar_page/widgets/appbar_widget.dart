@@ -26,7 +26,7 @@ class AppbarWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                DateFormat('EEEE').format(state.selectedDay ?? now),
+                DateFormat('EEEE', "en_US").format(state.selectedDay ?? now),
                 style: fonts.semiBold14,
               ),
               GestureDetector(
@@ -48,7 +48,7 @@ class AppbarWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '${state.selectedDay?.day} ${DateFormat.MMMM().format(state.selectedDay ?? DateTime.now())} ${state.selectedDay?.year}',
+                      '${state.selectedDay?.day} ${DateFormat.MMMM("en_US").format(state.selectedDay ?? DateTime.now())} ${state.selectedDay?.year}',
                       style: fonts.regular12.copyWith(fontSize: 10.sp),
                     ),
                     Icon(

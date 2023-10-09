@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:todo_app/aplication/calendar_bloc/calendar_bloc.dart';
 import 'package:todo_app/infrastructure/db_repository/database_repository.dart';
 import 'package:todo_app/infrastructure/models/event_model.dart';
@@ -77,7 +76,7 @@ class _AddEventPageState extends State<AddEventPage> {
                           ),
                           child: GestureDetector(
                             onTap: () => Navigator.pop(context),
-                            child: SvgPicture.asset(icons.arrowLeft),
+                            child: const Icon(Icons.arrow_back_sharp),
                           ),
                         ),
                         CustomTextField(
@@ -123,12 +122,9 @@ class _AddEventPageState extends State<AddEventPage> {
                             controller: locationController,
                             title: 'event_location'.tr(),
                             hintText: 'location',
-                            suffixIcon: SvgPicture.asset(
-                              icons.location,
-                              colorFilter: ColorFilter.mode(
-                                colors.primary,
-                                BlendMode.srcIn,
-                              ),
+                            suffixIcon: Icon(
+                              Icons.location_on_outlined,
+                              color: colors.primary,
                             ),
                           ),
                         ),

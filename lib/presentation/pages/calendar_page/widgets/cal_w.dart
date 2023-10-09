@@ -172,7 +172,7 @@ class Header extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  '${DateFormat.MMMM().format(state.selectedMonth!)}   ${state.selectedMonth?.year}',
+                  DateFormat.MMMM("en_US").format(state.selectedMonth!),
                   textAlign: TextAlign.center,
                   style: fonts.semiBold14,
                 ),

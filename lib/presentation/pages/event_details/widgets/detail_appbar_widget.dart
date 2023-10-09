@@ -46,7 +46,18 @@ class _DetailAppbarWidgetState extends State<DetailAppbarWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
-                        child: SvgPicture.asset(icons.back),
+                        child: Container(
+                            alignment: Alignment.center,
+                            height: 40.h,
+                            width: 40.h,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20.h),
+                                color: colors.white),
+                            child: Icon(
+                              Icons.keyboard_arrow_left,
+                              color: colors.black,
+                              size: 25.h,
+                            )),
                         onTap: () => Navigator.pop(context),
                       ),
                       InkWell(
@@ -123,7 +134,7 @@ class _DetailAppbarWidgetState extends State<DetailAppbarWidget> {
     required CustomColorSet colors,
   }) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
