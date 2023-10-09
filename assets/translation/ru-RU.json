@@ -1,0 +1,20 @@
+{
+  "event_time": "Event time",
+  "edit": "Edit",
+  "description": "Description",
+  "add_event": "+ Add Event",
+  "schedule": "Schedule",
+  "event_name": "Event name",
+  "event_description": "Event description",
+  "event_location": "Event location",
+  "priority_color": "Priority color",
+  "save": "Save",
+  "delete_event": "Delete Event",
+  "reminder": "Reminder",
+  "input_required": "Input is required",
+  "success": "Success",
+  "no_data": "No Data",
+  "next": "NEXT",
+  "start_time": "Start time",
+  "end_time": "End time"
+}
