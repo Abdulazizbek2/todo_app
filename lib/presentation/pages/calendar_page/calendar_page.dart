@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
             return Scaffold(
               resizeToAvoidBottomInset: false,
               backgroundColor: colors.backgroundColor,
-              body: state.toDoForCheck != null &&
+              body: state.eventMap != null &&
                       state.selectedMonth != null &&
                       state.selectedDay != null &&
                       state.eventModelList != null

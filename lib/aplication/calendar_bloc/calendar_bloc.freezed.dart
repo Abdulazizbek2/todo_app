@@ -967,7 +967,7 @@ mixin _$CalendarState {
   DateTime? get selectedDay => throw _privateConstructorUsedError;
   DateTime? get selectedMonth => throw _privateConstructorUsedError;
   List<EventModel>? get eventModelList => throw _privateConstructorUsedError;
-  Map<String, List<EventModel>>? get toDoForCheck =>
+  Map<String, List<EventModel>>? get eventMap =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -986,7 +986,7 @@ abstract class $CalendarStateCopyWith<$Res> {
       DateTime? selectedDay,
       DateTime? selectedMonth,
       List<EventModel>? eventModelList,
-      Map<String, List<EventModel>>? toDoForCheck});
+      Map<String, List<EventModel>>? eventMap});
 }
 
 /// @nodoc
@@ -1006,7 +1006,7 @@ class _$CalendarStateCopyWithImpl<$Res, $Val extends CalendarState>
     Object? selectedDay = freezed,
     Object? selectedMonth = freezed,
     Object? eventModelList = freezed,
-    Object? toDoForCheck = freezed,
+    Object? eventMap = freezed,
   }) {
     return _then(_value.copyWith(
       dropDownValue: freezed == dropDownValue
@@ -1025,9 +1025,9 @@ class _$CalendarStateCopyWithImpl<$Res, $Val extends CalendarState>
           ? _value.eventModelList
           : eventModelList // ignore: cast_nullable_to_non_nullable
               as List<EventModel>?,
-      toDoForCheck: freezed == toDoForCheck
-          ? _value.toDoForCheck
-          : toDoForCheck // ignore: cast_nullable_to_non_nullable
+      eventMap: freezed == eventMap
+          ? _value.eventMap
+          : eventMap // ignore: cast_nullable_to_non_nullable
               as Map<String, List<EventModel>>?,
     ) as $Val);
   }
@@ -1046,7 +1046,7 @@ abstract class _$$CalendarStateImplCopyWith<$Res>
       DateTime? selectedDay,
       DateTime? selectedMonth,
       List<EventModel>? eventModelList,
-      Map<String, List<EventModel>>? toDoForCheck});
+      Map<String, List<EventModel>>? eventMap});
 }
 
 /// @nodoc
@@ -1064,7 +1064,7 @@ class __$$CalendarStateImplCopyWithImpl<$Res>
     Object? selectedDay = freezed,
     Object? selectedMonth = freezed,
     Object? eventModelList = freezed,
-    Object? toDoForCheck = freezed,
+    Object? eventMap = freezed,
   }) {
     return _then(_$CalendarStateImpl(
       dropDownValue: freezed == dropDownValue
@@ -1083,9 +1083,9 @@ class __$$CalendarStateImplCopyWithImpl<$Res>
           ? _value._eventModelList
           : eventModelList // ignore: cast_nullable_to_non_nullable
               as List<EventModel>?,
-      toDoForCheck: freezed == toDoForCheck
-          ? _value._toDoForCheck
-          : toDoForCheck // ignore: cast_nullable_to_non_nullable
+      eventMap: freezed == eventMap
+          ? _value._eventMap
+          : eventMap // ignore: cast_nullable_to_non_nullable
               as Map<String, List<EventModel>>?,
     ));
   }
@@ -1099,9 +1099,9 @@ class _$CalendarStateImpl extends _CalendarState {
       this.selectedDay = null,
       this.selectedMonth = null,
       final List<EventModel>? eventModelList = null,
-      final Map<String, List<EventModel>>? toDoForCheck = null})
+      final Map<String, List<EventModel>>? eventMap = null})
       : _eventModelList = eventModelList,
-        _toDoForCheck = toDoForCheck,
+        _eventMap = eventMap,
         super._();
 
   @override
@@ -1124,20 +1124,20 @@ class _$CalendarStateImpl extends _CalendarState {
     return EqualUnmodifiableListView(value);
   }
 
-  final Map<String, List<EventModel>>? _toDoForCheck;
+  final Map<String, List<EventModel>>? _eventMap;
   @override
   @JsonKey()
-  Map<String, List<EventModel>>? get toDoForCheck {
-    final value = _toDoForCheck;
+  Map<String, List<EventModel>>? get eventMap {
+    final value = _eventMap;
     if (value == null) return null;
-    if (_toDoForCheck is EqualUnmodifiableMapView) return _toDoForCheck;
+    if (_eventMap is EqualUnmodifiableMapView) return _eventMap;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
 
   @override
   String toString() {
-    return 'CalendarState(dropDownValue: $dropDownValue, selectedDay: $selectedDay, selectedMonth: $selectedMonth, eventModelList: $eventModelList, toDoForCheck: $toDoForCheck)';
+    return 'CalendarState(dropDownValue: $dropDownValue, selectedDay: $selectedDay, selectedMonth: $selectedMonth, eventModelList: $eventModelList, eventMap: $eventMap)';
   }
 
   @override
@@ -1153,8 +1153,7 @@ class _$CalendarStateImpl extends _CalendarState {
                 other.selectedMonth == selectedMonth) &&
             const DeepCollectionEquality()
                 .equals(other._eventModelList, _eventModelList) &&
-            const DeepCollectionEquality()
-                .equals(other._toDoForCheck, _toDoForCheck));
+            const DeepCollectionEquality().equals(other._eventMap, _eventMap));
   }
 
   @override
@@ -1164,7 +1163,7 @@ class _$CalendarStateImpl extends _CalendarState {
       selectedDay,
       selectedMonth,
       const DeepCollectionEquality().hash(_eventModelList),
-      const DeepCollectionEquality().hash(_toDoForCheck));
+      const DeepCollectionEquality().hash(_eventMap));
 
   @JsonKey(ignore: true)
   @override
@@ -1179,7 +1178,7 @@ abstract class _CalendarState extends CalendarState {
       final DateTime? selectedDay,
       final DateTime? selectedMonth,
       final List<EventModel>? eventModelList,
-      final Map<String, List<EventModel>>? toDoForCheck}) = _$CalendarStateImpl;
+      final Map<String, List<EventModel>>? eventMap}) = _$CalendarStateImpl;
   const _CalendarState._() : super._();
 
   @override
@@ -1191,7 +1190,7 @@ abstract class _CalendarState extends CalendarState {
   @override
   List<EventModel>? get eventModelList;
   @override
-  Map<String, List<EventModel>>? get toDoForCheck;
+  Map<String, List<EventModel>>? get eventMap;
   @override
   @JsonKey(ignore: true)
   _$$CalendarStateImplCopyWith<_$CalendarStateImpl> get copyWith =>

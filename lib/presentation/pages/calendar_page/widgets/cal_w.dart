@@ -54,7 +54,7 @@ class Body extends StatelessWidget {
                     children: week.map((d) {
                       return RowItem(
                         date: d.date,
-                        todoList: state.toDoForCheck?[
+                        eventList: state.eventMap?[
                                 "${d.date.year}-${d.date.month}-${d.date.day}"] ??
                             [],
                         isActiveMonth: d.isActiveMonth,
@@ -80,9 +80,9 @@ class RowItem extends StatelessWidget {
     required this.isSelected,
     required this.date,
     required this.onTap,
-    required this.todoList,
+    required this.eventList,
   });
-  final List<EventModel> todoList;
+  final List<EventModel> eventList;
 
   final bool isActiveMonth;
   final VoidCallback onTap;
@@ -128,14 +128,14 @@ class RowItem extends StatelessWidget {
             ),
             Positioned(
               top: 33.h,
-              child: todoList.isNotEmpty
+              child: eventList.isNotEmpty
                   ? Wrap(
                       spacing: 4.w,
                       children: List.generate(
-                        todoList.length > 3 ? 3 : todoList.length,
+                        eventList.length > 3 ? 3 : eventList.length,
                         (i) => CircleAvatar(
                           radius: 2.r,
-                          backgroundColor: todoList[i]
+                          backgroundColor: eventList[i]
                               .color!
                               .withOpacity(isActiveMonth ? 1 : 0.5),
                         ),
