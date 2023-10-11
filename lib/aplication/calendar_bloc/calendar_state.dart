@@ -10,6 +10,6 @@ class CalendarState with _$CalendarState {
     @Default(null) DateTime? selectedDay,
     @Default(null) DateTime? selectedMonth,
     @Default(null) List<EventModel>? eventModelList,
-    @Default(null) Map<String, List<EventModel>>? toDoForCheck,
+    @Default(null) Map<String, List<EventModel>>? eventMap,
   }) = _CalendarState;
 }

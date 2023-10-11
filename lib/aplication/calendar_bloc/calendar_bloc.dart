@@ -52,18 +52,18 @@ class CalendarBloc extends Bloc<CalendarEvent, CalendarState> {
     _GetAllEvents event,
     Emitter<CalendarState> emit,
   ) async {
-    List<EventModel> todo = await DBRepozitory.getAllEvents();
-    Map<String, List<EventModel>> toDo = {};
-    for (EventModel el in todo) {
-      if (toDo.keys.contains(el.date)) {
-        toDo[el.date]?.add(el);
+    List<EventModel> evenList = await DBRepozitory.getAllEvents();
+    Map<String, List<EventModel>> eventMap = {};
+    for (EventModel el in evenList) {
+      if (eventMap.keys.contains(el.date)) {
+        eventMap[el.date]?.add(el);
       } else {
-        toDo[el.date ?? "0"] = [el];
+        eventMap[el.date ?? "0"] = [el];
       }
     }
     emit(state.copyWith(
       dropDownValue: const Color(0xff009FEE),
-      toDoForCheck: toDo,
+      eventMap: eventMap,
     ));
   }
 

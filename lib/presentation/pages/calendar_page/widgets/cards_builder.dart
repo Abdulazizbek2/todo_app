@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/aplication/calendar_bloc/calendar_bloc.dart';
 import 'package:todo_app/infrastructure/models/event_model.dart';
@@ -29,7 +28,7 @@ class CardsBuilder extends StatelessWidget {
                   ),
                 ),
               )
-            : Center(heightFactor: 10, child: Text('no_data'.tr()));
+            : const SizedBox();
       },
     );
   }
